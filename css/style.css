@@ -1,0 +1,575 @@
+@font-face {
+    font-family: RalewayRegular;
+    src: url(../fonts/Raleway-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: RalewayBold;
+    src: url(../fonts/Raleway-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: RalewayBlack;
+    src: url(../fonts/Raleway-Black.ttf);
+    font-weight: 900;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+p {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.ffRegular {
+    font-family: RalewayRegular;
+}
+
+.ffBold {
+    font-family: RalewayBold;
+}
+
+.ffBlack {
+    font-family: RalewayBlack;
+}
+
+.fs20 {
+    font-size: 1.04vw;
+}
+
+.fs25 {
+    font-size: 1.30vw;
+}
+
+.fs40 {
+    font-size: 2.08vw;
+}
+
+.gray {
+    color: #383838;
+}
+
+.white {
+    color: #fff;
+}
+
+.purple {
+    color: #8E3ABA;
+}
+
+.bgPurple {
+    background-color: #8E3ABA;
+}
+
+.bgGreen {
+    background-color: #64DDC8;
+}
+
+.boxPadding {
+    padding: 0.1px 0;
+}
+
+
+
+/* header */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1.14vw 7.55vw 0 7.55vw;
+}
+
+.navigationList {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navigationList>li {
+    margin: 0 2.08vw 0 0;
+}
+
+.navigationList>li:nth-child(4) {
+    margin: 0;
+}
+
+.navigationList>li>a {
+    padding: 0 0.26vw 0.26vw;
+}
+
+.navigationList>li:hover>a {
+    /* font-family: RalewayBold; */
+    font-weight: 700;
+    border-bottom: 5px solid #000000;
+}
+
+.navigation>img {
+    width: 10.07vw;
+    margin: 0 13.67vw 0 8.12vw;
+}
+
+.socialMedia {
+    display: flex;
+    align-items: center;
+}
+
+.socialMedia>a:hover {
+    opacity: .5;
+    transition: ease-in .3s;
+}
+
+.socialMedia>a>img {
+    width: 2.08vw;
+    margin-left: 1.14vw;
+}
+
+.socialMedia>a:nth-child(1)>img {
+    margin-left: 0;
+}
+
+.socialMedia>.btnContactanos {
+    margin-left: 1.35vw;
+}
+
+.btnContactanos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11.40vw;
+    height: 3.54vw;
+    border-radius: 40px;
+}
+
+
+/* First view */
+
+.fvBox {
+    display: flex;
+    align-items: center;
+    margin: 3.07vw 0 0 0;
+}
+
+.fvInfo {
+    margin: 12.60vw 14.71vw 0 14.71vw;
+}
+
+.fvInfo>h1 {
+    font-size: 3.64vw;
+    width: 20.416vw;
+}
+
+.fvInfo>p {
+    width: 22.447vw;
+    margin: 2.39vw 0;
+}
+
+.arrowDown {
+    background-color: #8E3ABA;
+    border-radius: 50%;
+    width: 3.645vw;
+    height: 3.645vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.arrowDown:hover {
+    opacity: .5;
+    transition: ease-in .3s;
+}
+
+
+/* Second view */
+.secondView {
+    position: relative;
+    overflow: hidden;
+}
+
+.svBox {
+    display: flex;
+    margin: 11.35vw 0 13.698vw 0;
+}
+
+.svBoxTitle {
+    margin: 0 8.17vw 0 20.20vw;
+}
+
+.svBoxTitle>h2 {
+    font-size: 10.41vw;
+    color: #64DDC8;
+    width: 22.13vw;
+    word-break: break-word;
+    text-align: right;
+    line-height: 0.75;
+}
+
+.svBoxInfo {
+    width: 27.4479vw;
+}
+
+.svBoxInfo>p {
+    margin: 1.875vw 0 2.60vw;
+}
+
+.svBoxInfoList>li {
+    list-style: disc;
+    margin-bottom: 1.718vw;
+    width: 16.927vw;
+}
+
+.svBoxInfoList>li:nth-child(4) {
+    margin-bottom: 2.60vw;
+}
+
+.btnPrograma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24.58vw;
+    height: 3.54vw;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btnPrograma:hover {
+    opacity: .5;
+    transition: ease-in .3s;
+}
+
+.photoGirl {
+    position: absolute;
+    top: 21.5vw;
+    left: -5.9vw;
+    width: 30.73vw;
+}
+
+.photoGuys {
+    position: absolute;
+    top: 7.4vw;
+    right: -3vw;
+    width: 22.48vw;
+    transform: rotate(13deg);
+}
+
+/* Third view */
+.thirdView {
+    position: relative;
+}
+
+.tvBoxInfo {
+    margin: 0 0 0 14.739vw;
+}
+
+.tvBoxInfo>p:nth-child(2) {
+    width: 27.44vw;
+    margin: 1.71vw 0 1.198vw;
+}
+
+.tvBoxInfo>p:nth-child(3) {
+    margin: 0 0 .93vw 0;
+}
+
+.btnConversemos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    width: 12.34vw;
+    height: 3.54vw;
+    border-radius: 40px;
+    border: 2px solid #8E3ABA;
+}
+
+.btnConversemos:hover {
+    transition: ease-in .3s;
+    background-color: #8E3ABA;
+    color: #fff;
+}
+
+.montains {
+    background-image: url('../img/montains.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    padding: 26vw 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 16.66vw;
+    min-height: 13.02vw;
+    background-color: #EBE8E8;
+    border-radius: 20px;
+}
+
+.card:before {
+    content: url('../img/barrita.png');
+    width: 5px;
+    position: absolute;
+    bottom: -4.74vw;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.card>h3 {
+    margin: 1.56vw 0 .83vw 1.38vw;
+}
+
+.card>p {
+    width: 13.90vw;
+    margin: 0 0 0 1.38vw;
+}
+
+.cierre {
+    position: absolute;
+    top: 3vw;
+    right: 8.88vw;
+}
+
+.hitos {
+    position: absolute;
+    top: 13vw;
+    right: 30.639vw
+}
+
+.planAccion {
+    position: absolute;
+    top: 24.6vw;
+    left: 30.93vw;
+}
+
+.diagnostico {
+    position: absolute;
+    top: 33.8vw;
+    left: 9.48vw;
+}
+
+/* Fourth view */
+.fourthVBox {
+    margin: 6.51vw 0 0 14.948vw;
+}
+
+.servicesBox>h2 {
+    margin-bottom: 3.28vw;
+}
+
+.services {
+    display: flex;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #EBE8E8;
+    border: 3px solid #535353;
+    border-radius: 20px;
+    width: 20.01vw;
+    height: 9.739vw;
+    margin: 0 0 1.458vw 0;
+}
+
+.service>h3 {
+    margin: 0 0 0.57vw 0;
+    width: 13.385vw;
+}
+
+.service>p {
+    width: 13.385vw;
+}
+
+.serviceContent {
+    background-image: url(../img/personalizado.png);
+    background-repeat: no-repeat;
+    background-size: 39.32vw 37.39vw;
+    background-position: right;
+}
+
+.serviceContentBox {
+    width: 27.13vw;
+    margin: 5.67vw 29.78vw 0 6.82vw;
+}
+
+.serviceContentBox>p:nth-child(2) {
+    margin: 2.083vw 0 1.04vw;
+}
+
+.serviceContentBox>p:nth-child(3) {
+    margin-bottom: 2.083vw;
+}
+
+.btnAquirir {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24.58vw;
+    height: 3.54vw;
+    border-radius: 40px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btnAquirir:hover {
+    opacity: .5;
+    transition: ease-in .5s;
+}
+
+.serviceSelected {
+    background: #FFEBAB;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 3px solid transparent;
+}
+
+.serviceSelected::before {
+    content: url('../img/pin.png');
+    width: 3.85vw;
+    position: absolute;
+    top: -3vw;
+    left: 3.1vw;
+}
+
+/* Fifth view */
+.fifthViewBox {
+    margin: 6.19vw 0 0 15.83vw;
+}
+
+.ourTeam {
+    display: flex;
+    align-items: center;
+}
+
+.ourTeam>h2 {
+    margin-right: 3.28vw;
+}
+
+.ourTeam>.btnTeam {
+    margin-right: 1.82vw;
+}
+
+.btnTeam {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EBE8E8;
+    border: 3px solid #535353;
+    box-sizing: border-box;
+    border-radius: 30px;
+    width: 7.55vw;
+    height: 2.4479vw;
+}
+
+.btnTeamSelected {
+    background-color: #64DDC8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 3px solid transparent;
+}
+
+.ourTeamContent {
+    display: flex;
+    align-items: center;
+    margin: 1.66vw 0 0 0;
+}
+
+.ourTeamPhoto>img {
+    width: 26.92vw;
+}
+
+.ourTeamInfo {
+    width: 28.33vw;
+    margin: 0 0 0 7.33vw;
+}
+
+.ourTeamInfo>p {
+    margin: 0.83vw 0 1.35vw 0;
+}
+
+/* Sixth view */
+.sixthViewBox {
+    display: flex;
+    margin: 5.68vw 0 -3vw 15.67vw;
+}
+
+.svInfo>p {
+    margin: 1.45vw 0 4.68vw;
+    width: 22.29vw;
+}
+
+.svForm {
+    margin: 0 0 0 10.10vw;
+}
+
+/* footer */
+.footer {
+    background-color: #383838;
+    position: relative;
+}
+
+.footerBox {
+    margin: 3.02vw 15.41vw 7.18vw 13.80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerSocialMedia>img {
+    width: 8.12vw;
+    margin-bottom: 1.56vw;
+}
+
+.footerInfo>p {
+    width: 27.44vw;
+    text-align: right;
+}
+
+
+
+@media (max-width: 768px) {
+    
+}
+
+
+
+/* styles for js, etc */
+
+.disabled {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.activeFlex {
+    display: flex;
+}
