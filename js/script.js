@@ -6,7 +6,7 @@ const ourTeamsContents = document.querySelectorAll('.ourTeamContent');
 
 services.forEach((service, content) => {
 
-    service.addEventListener('mouseover', () => {
+    service.addEventListener('click', () => {
 
         services.forEach((service) => {
             service.classList.remove('serviceSelected');
@@ -15,17 +15,23 @@ services.forEach((service, content) => {
         service.classList.add('serviceSelected');
 
         servicesContentBox.forEach((serviceContentBox) => {
+            serviceContentBox.classList.remove('visible');
             serviceContentBox.classList.remove('active');
         });
 
         servicesContentBox[content].classList.add('active');
+        setTimeout(()=>{
+            servicesContentBox[content].classList.add('visible');
+        }, 50);
+
     });
 });
 
 
 buttomsTeam.forEach((buttomTeam, index) => {
 
-    buttomTeam.addEventListener('mouseover', () => {
+    buttomTeam.addEventListener('click', (e) => {
+        e.preventDefault();
 
         buttomsTeam.forEach((buttomTeam) => {
             buttomTeam.classList.remove('btnTeamSelected');
@@ -34,10 +40,14 @@ buttomsTeam.forEach((buttomTeam, index) => {
         buttomTeam.classList.add('btnTeamSelected');
 
         ourTeamsContents.forEach((ourTeamContent) => {
+            ourTeamContent.classList.remove('visible');
             ourTeamContent.classList.remove('activeFlex');
         });
-
+        
         ourTeamsContents[index].classList.add('activeFlex');
+        setTimeout(()=>{
+            ourTeamsContents[index].classList.add('visible');
+        }, 50);
     });
 });
 
