@@ -6,7 +6,7 @@ const menuHamburguer = document.querySelector('.menuHamburguer');
 const menuList = document.querySelector('.navigationList');
 const menuOptionsClick = document.querySelectorAll('.navigationList li a');
 const closeMenu = document.getElementById('closeMenu');
-const closeMenuWhenClickOut = document.querySelector('.boxPadding');
+const closeMenuWhenClickOut = document.querySelectorAll('.boxPadding');
 
 
 
@@ -20,10 +20,10 @@ closeMenu.addEventListener('click', () => {
     menuList.classList.remove('activeMenu');
 
 })
-closeMenuWhenClickOut.addEventListener('click', () => {
-
-    menuList.classList.remove('activeMenu');
-
+closeMenuWhenClickOut.forEach((menuClickOut) => {
+    menuClickOut.addEventListener('click', () => {
+        menuList.classList.remove('activeMenu');
+    })
 })
 
 menuOptionsClick.forEach((optionClick) => {
