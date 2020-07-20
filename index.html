@@ -15,6 +15,7 @@
         <header>
             <nav class="navigation">
                 <ul class="navigationList">
+                    <img id="closeMenu" src="img/cancel.png" alt="closeMenu">
                     <li><a class="fs20 ffRegular gray" href="#" rel="noopener noreferrer">Objetivo</a>
                     </li>
                     <li><a class="fs20 ffRegular gray" href="#" rel="noopener noreferrer">Metodología</a></li>
@@ -23,6 +24,7 @@
                     <li><a class="fs20 ffRegular gray" href="#" rel="noopener noreferrer">Nosotros</a>
                     </li>
                 </ul>
+                <img class="menuHamburguer byeDesktop" src="img/menu-abierto.png" alt="Menu">
                 <img src="img/wakeUpLogo.png" alt="Logo">
                 <div class="socialMedia">
                     <a href="#" target="_blank" rel="noopener noreferrer"><img src="img/fb.png" alt="facebook"></a>
@@ -49,9 +51,13 @@
                     </div>
                 </div>
                 <div class="fvVideo">
-                    <iframe width="auto" height="auto" src="https://www.youtube.com/embed/wXhTHyIgQ_U" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+
+                    <video width="320" height="240" controls>
+                        <source src="img/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <!-- <img class="videoBorder" src="img/video_bottom.svg" alt="borde_video"> -->
                 </div>
             </div>
         </section>
@@ -126,7 +132,7 @@
         <!-- Fourth View -->
         <section class="fourthView boxPadding">
             <div class="fourthVBox">
-                <div class="services">
+                <div class="services byeMobile">
                     <div class="servicesBox">
                         <h2 class="ffBold fs40 gray">Nuestros servicios</h2>
                         <div class="service serviceSelected">
@@ -144,7 +150,7 @@
                     </div>
 
                     <div class="serviceContent">
-                        <div class="serviceContentBox disabled active">
+                        <div class="serviceContentBox visible active">
                             <p class="ffRegular fs40 gray">Trasciende tu negocio</p>
                             <p class="ffRegular fs20 gray">Las empresas están hechas de Personas, Procesos y Sistemas;
                                 No
@@ -162,7 +168,7 @@
                             <a class="ffRegular fs25 bgPurple white btnAquirir" href="#" target="_blank"
                                 rel="noopener noreferrer">Quiero adquirir este programa </a>
                         </div>
-                        <div class="serviceContentBox disabled">
+                        <div class="serviceContentBox">
                             <p class="ffRegular fs40 gray">Trasciende tu ser</p>
                             <p class="ffRegular fs20 gray">Lorem Ipsum is simply dummy text of the printing and
                                 typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
@@ -173,7 +179,65 @@
                             <a class="ffRegular fs25 bgPurple white btnAquirir" href="#" target="_blank"
                                 rel="noopener noreferrer">Quiero adquirir este programa </a>
                         </div>
-                        <div class="serviceContentBox disabled">
+                        <div class="serviceContentBox">
+                            <p class="ffRegular fs40 gray">Trasciende con nuestro contenido</p>
+                            <p class="ffRegular fs20 gray">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                            </p>
+                            <p class="ffBold fs20 gray">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                            <a class="ffRegular fs25 bgPurple white btnAquirir" href="#" target="_blank"
+                                rel="noopener noreferrer">Quiero adquirir este programa </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fourth View mobile -->
+                <div class="services byeDesktop">
+                    <div class="servicesBox">
+                        <h2 class="ffBold fs40 gray">Nuestros servicios</h2>
+                        <div class="service serviceSelected">
+                            <h3 class="ffBold fs25 gray">Programa personalizado</h3>
+                            <p class="ffRegular fs20 gray">Transciende tu negocio</p>
+                        </div>
+                        <div class="serviceContentBox visible active">
+                            <p class="ffRegular fs40 gray">Trasciende tu negocio</p>
+                            <p class="ffRegular fs20 gray">Las empresas están hechas de Personas, Procesos y Sistemas;
+                                No
+                                tienen
+                                que ser perfectas pero si estar en balance. Si no están en balance, las cosas no
+                                funcionan.
+                            </p>
+                            <p class="ffBold fs20 gray"> ¿Sabes que factor es el que esta mal? ó ¿Quieres un balance
+                                dentro
+                                de la organización? Hacemos
+                                un diagnóstico de los tres enfoques y te ayudamos a encontrar el balance deseado. Es
+                                tiempo
+                                de
+                                WakeUp</p>
+                            <a class="ffRegular fs25 bgPurple white btnAquirir" href="#" target="_blank"
+                                rel="noopener noreferrer">Quiero adquirir este programa </a>
+                        </div>
+                        <div class="service">
+                            <h3 class="ffBold fs25 gray">Programa para empresas</h3>
+                            <p class="ffRegular fs20 gray">Trasciende tu ser</p>
+                        </div>
+                        <div class="serviceContentBox">
+                            <p class="ffRegular fs40 gray">Trasciende tu ser</p>
+                            <p class="ffRegular fs20 gray">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                            </p>
+                            <p class="ffBold fs20 gray">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            </p>
+                            <a class="ffRegular fs25 bgPurple white btnAquirir" href="#" target="_blank"
+                                rel="noopener noreferrer">Quiero adquirir este programa </a>
+                        </div>
+                        <div class="service">
+                            <h3 class="ffBold fs25 gray">Contenido de valor disruptivo</h3>
+                            <p class="ffRegular fs20 gray">Trasciende con nuestro contenido</p>
+                        </div>
+                        <div class="serviceContentBox">
                             <p class="ffRegular fs40 gray">Trasciende con nuestro contenido</p>
                             <p class="ffRegular fs20 gray">Lorem Ipsum is simply dummy text of the printing and
                                 typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since
@@ -199,7 +263,7 @@
                     <a class="ffBold fs25 gray btnTeam" href="#" target="_blank" rel="noopener noreferrer">Mitsuho!</a>
                     <a class="ffBold fs25 gray btnTeam" href="#" target="_blank" rel="noopener noreferrer">Alme!</a>
                 </div>
-                <div class="ourTeamContent disabled activeFlex">
+                <div class="ourTeamContent visible activeFlex">
                     <div class="ourTeamPhoto">
                         <img src="img/Diana.png" alt="photo">
                     </div>
@@ -216,7 +280,7 @@
                             rel="noopener noreferrer">Conversemos</a>
                     </div>
                 </div>
-                <div class="ourTeamContent disabled">
+                <div class="ourTeamContent">
                     <div class="ourTeamPhoto">
                         <img src="https://via.placeholder.com/517x589" alt="photo">
                     </div>
@@ -233,7 +297,7 @@
                             rel="noopener noreferrer">Conversemos</a>
                     </div>
                 </div>
-                <div class="ourTeamContent disabled">
+                <div class="ourTeamContent">
                     <div class="ourTeamPhoto">
                         <img src="https://via.placeholder.com/517x589" alt="photo">
                     </div>
@@ -266,7 +330,8 @@
                     <img src="img/ArrowUpGreen.png" alt="arrowUp">
                 </div>
                 <div class="svForm">
-                    <svg width="32.5vw" height="27.29vw" viewBox="0 0 644 524" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="32.5vw" height="27.29vw" viewBox="0 0 644 524" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <rect y="27" width="640" height="68" rx="34" fill="#EBE8E8" />
                         <rect y="164" width="640" height="68" rx="34" fill="#EBE8E8" />
                         <rect y="303" width="640" height="68" rx="34" fill="#EBE8E8" />

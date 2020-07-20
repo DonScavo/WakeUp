@@ -20,6 +20,10 @@
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     background-color: #fff;
@@ -103,7 +107,13 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 1.14vw 7.55vw 0 7.55vw;
+    padding: 1.14vw 7.55vw 0 7.55vw;
+    position: fixed;
+    top: 0em;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
 }
 
 .navigationList {
@@ -168,15 +178,20 @@ img {
 
 
 /* First view */
+.firtsView {
+    padding-top: 7.5vw;
+}
 
 .fvBox {
     display: flex;
     align-items: center;
     margin: 3.07vw 0 0 0;
+    padding: 0 12vw;
+    justify-content: space-between;
 }
 
 .fvInfo {
-    margin: 12.60vw 14.71vw 0 14.71vw;
+    max-width: 22vw;
 }
 
 .fvInfo>h1 {
@@ -204,6 +219,22 @@ img {
     transition: ease-in .3s;
 }
 
+.fvVideo {
+    position: relative;
+}
+
+.fvVideo video {
+    width: 41vw;
+    height: auto;
+    border-radius: 2vw;
+}
+
+.videoBorder {
+    position: absolute;
+    bottom: 0;
+    width: 44.53vw;
+    left: 0;
+}
 
 /* Second view */
 .secondView {
@@ -374,6 +405,11 @@ img {
 }
 
 /* Fourth view */
+.fourthView {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
 .fourthVBox {
     margin: 6.51vw 0 0 14.948vw;
 }
@@ -398,6 +434,7 @@ img {
     width: 20.01vw;
     height: 9.739vw;
     margin: 0 0 1.458vw 0;
+    cursor: pointer;
 }
 
 .service>h3 {
@@ -409,16 +446,18 @@ img {
     width: 13.385vw;
 }
 
-.serviceContent {
+.serviceContent {}
+
+.serviceContentBox {
+    padding: 5.67vw 29.78vw 11.7vw 6.82vw;
+    display: none;
+    opacity: 0;
+    transition: opacity .6s;
+    min-height: 38vw;
     background-image: url(../img/personalizadoSticker.png);
     background-repeat: no-repeat;
     background-size: 39.32vw 37.39vw;
     background-position: right;
-}
-
-.serviceContentBox {
-    width: 27.13vw;
-    margin: 5.67vw 29.78vw 0 6.82vw;
 }
 
 .serviceContentBox>p:nth-child(2) {
@@ -451,8 +490,13 @@ img {
 }
 
 .serviceSelected::before {
-    content: url('../img/pin.png');
+    background-image: url('../img/pin.png');
+    content: '';
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 3.85vw;
+    height: 4vw;
     position: absolute;
     top: -3vw;
     left: 3.1vw;
@@ -495,7 +539,9 @@ img {
 }
 
 .ourTeamContent {
-    display: flex;
+    display: none;
+    transition: opacity .6s;
+    opacity: 0;
     align-items: center;
     margin: 1.66vw 0 0 0;
 }
@@ -523,6 +569,7 @@ img {
     margin: 1.45vw 0 4.68vw;
     width: 22.29vw;
 }
+
 .svInfo>img {
     width: 24.42vw;
 }
@@ -549,7 +596,7 @@ img {
     margin-bottom: 1.56vw;
 }
 
-.footerSocialMedia > .socialMedia > a > img {
+.footerSocialMedia>.socialMedia>a>img {
     filter: invert(.7);
 }
 
@@ -558,28 +605,86 @@ img {
     text-align: right;
 }
 
+.byeDesktop {
+    display: none;
+}
 
 
 @media (max-width: 768px) {
     .fs20 {
-        font-size: 1.04vw;
+        font-size: 4.26vw;
     }
 
     .fs25 {
-        font-size: 1.30vw;
+        font-size: 5.33vw;
     }
 
     .fs40 {
         font-size: 8vw;
     }
 
+    .firtsView {
+        padding-top: 13.5vw;
+    }
+
+    .navigation {
+        padding: 2.14vw 5vw;
+        justify-content: space-between;
+    }
+
+    .navigation>img {
+        margin: 0;
+    }
+
+    .navigation>img:nth-child(3) {
+        width: 20vw;
+    }
+
+    .navigation>.socialMedia>a>img {
+        display: none;
+    }
+
+    .navigationList {
+        flex-direction: column;
+        position: absolute;
+        left: -100vw;
+        transition: ease .5s;
+        width: 100vw;
+        background-color: #fff;
+        top: 0;
+        height: 50vh;
+    }
+
+    .socialMedia>.btnContactanos {
+        margin: 0;
+    }
+
+    .btnContactanos {
+        width: 37.4vw;
+        height: 9.54vw;
+    }
+
+    .activeMenu {
+        left: 0;
+    }
+
+    #closeMenu {
+        position: absolute;
+        filter: invert(1);
+        left: 8vw;
+        top: 6vw;
+        width: 4vw;
+    }
+
     .fvBox {
         flex-direction: column-reverse;
         margin: 6vw 10vw 0 10vw;
+        padding: 0;
     }
 
     .fvInfo {
         margin: 6vw 0 0 0;
+        max-width: 80vw;
     }
 
     .fvInfo>h1 {
@@ -589,26 +694,288 @@ img {
 
     .fvInfo>p {
         width: 100%;
-        margin: 6.39vw 0;
+        margin: 5.39vw 0;
+    }
+
+    .fvVideo video {
+        width: 80vw;
+    }
+
+
+    .svBox {
+        flex-direction: column;
+        margin: 12vw 0 14vw;
+    }
+
+    .svBoxTitle {
+        margin: 0 10vw 6vw;
+    }
+
+    .svBoxTitle>h2 {
+        font-size: 12.41vw;
+        width: 80vw;
+        text-align: left;
+    }
+
+    .svBoxInfo {
+        margin: 0 10vw;
+        width: 80vw;
+    }
+
+    .svBoxInfo>p {
+        margin: 4.875vw 0 5.6vw;
+    }
+
+    .svBoxInfoList>li {
+        width: 80vw;
+        margin-bottom: 3.718vw;
+    }
+
+    .svBoxInfoList>li:nth-child(4) {
+        margin-bottom: 5.6vw;
+    }
+
+    .btnPrograma {
+        font-size: 4.26vw;
+        width: 76vw;
+        height: 13.54vw;
+    }
+
+    .photoGirl {
+        top: 83.4vw;
+        left: unset;
+        width: 34.48vw;
+        right: -8vw;
+    }
+
+    .photoGuys {
+        top: 17vw;
+        right: -6vw;
+        width: 30.73vw;
+    }
+
+
+    .tvBoxInfo {
+        margin: 0 10vw;
+    }
+
+    .tvBoxInfo>p:nth-child(2) {
+        width: 80vw;
+        margin: 4.71vw 0 5.198vw;
+    }
+
+    .tvBoxInfo>p:nth-child(3) {
+        margin: 0 0 3.93vw 0;
+    }
+
+    .btnConversemos {
+        width: 43.34vw;
+        height: 13.54vw;
+    }
+
+    .montains {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        margin-top: 0;
+        padding: 9vw 0 49vw;
+    }
+
+    .diagnostico,
+    .planAccion,
+    .hitos,
+    .cierre {
+        position: unset;
+    }
+
+    .card {
+        width: 80vw;
+        max-width: 80vw;
+        min-height: 45.02vw;
+        margin: 0 10vw 6vw;
+    }
+
+    .card:before {
+        display: none;
+    }
+
+    .card>h3 {
+        margin: 3.56vw 0 2.83vw 4vw;
+    }
+
+    .card>p {
+        width: 72vw;
+        margin: 0 0 0 4vw;
+    }
+
+    .fourthVBox {
+        margin: 10vw 0 0 10vw;
+    }
+
+    .services {
+        flex-direction: column;
+    }
+
+    .servicesBox>h2 {
+        margin-bottom: 8.28vw;
+    }
+
+    .service {
+        width: 71vw;
+        height: 35.739vw;
+        margin: 0 0 6.458vw 0;
+    }
+
+    .service>h3 {
+        margin: 0 0 3.57vw 0;
+        width: 46.385vw;
+    }
+
+    .service>p {
+        width: 46.385vw;
+    }
+
+    .serviceSelected::before {
+        width: 100%;
+        height: 12vw;
+        top: -6vw;
+        left: 3.1vw;
+    }
+
+    .serviceContentBox {
+        padding: 0 20vw 9.7vw 0;
+        background-size: 41vw;
+        background-attachment: fixed;
+    }
+
+    .serviceContentBox>p:nth-child(2) {
+        margin: 4.083vw 0 4.04vw;
+    }
+
+    .serviceContentBox>p:nth-child(3) {
+        margin-bottom: 6.083vw;
+    }
+
+    .btnAquirir {
+        width: 80vw;
+        height: 13.54vw;
+    }
+
+    .fifthViewBox {
+        margin: 6.19vw 10vw 0 10vw
+    }
+
+    .ourTeam {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .ourTeam>h2 {
+        width: 80vw;
+        margin-right: 0;
+        margin-bottom: 6vw;
+    }
+
+    .ourTeam>.btnTeam {
+        margin-right: 0;
+    }
+
+    .btnTeam {
+        width: 25.56vw;
+        height: 10.4479vw;
+        font-size: 4.83vw;
+    }
+
+    .ourTeamContent {
+        flex-direction: column;
+    }
+
+    .ourTeamPhoto>img {
+        width: 100%;
+    }
+
+    .ourTeamInfo {
+        margin: 0;
+        width: 80vw;
+    }
+
+    .ourTeamInfo>h3 {
+        margin-bottom: 3vw;
+        text-align: center;
+    }
+
+    .ourTeamInfo>p {
+        margin: 2.83vw 0 4.35vw 0;
     }
 
     .sixthViewBox {
         flex-direction: column;
-        margin: 10vw;
+        margin: 10vw 10vw 30vw 10vw;
+        position: relative;
+    }
+
+    .svInfo>p {
+        margin: 2.45vw 0 4.68vw;
+        width: 80vw;
+    }
+
+    .svInfo>img {
+        width: 27.42vw;
+        position: absolute;
+        bottom: -14vw;
+    }
+
+    .svForm {
+        margin: 0;
     }
 
     .svForm>svg {
-        width: 100%;
+        width: 80vw;
+        height: 65vw;
     }
 
-    .fvVideo>iframe {
-        width: 100%;
-        max-width: 100%;
+    .svInfo>img {
+        width: 28vw;
+        position: absolute;
+        bottom: -34vw;
     }
 
     .arrowDown {
         width: 14.645vw;
         height: 14.645vw;
+    }
+
+    .footerBox {
+        flex-direction: column-reverse;
+        margin: 10vw;
+    }
+
+    .footerInfo>p {
+        width: 80vw;
+        text-align: left;
+    }
+
+    .footerSocialMedia {
+        width: 80vw;
+    }
+
+    .footerSocialMedia>img {
+        width: 38vw;
+        margin: 5vw 0;
+    }
+
+    .socialMedia>a>img {
+        width: 8.08vw;
+        margin-left: 5.14vw;
+    }
+
+    .byeDesktop {
+        display: flex;
+    }
+
+    .byeMobile {
+        display: none;
     }
 }
 
@@ -626,4 +993,8 @@ img {
 
 .activeFlex {
     display: flex;
+}
+
+.visible {
+    opacity: 1;
 }
