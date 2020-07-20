@@ -125,7 +125,6 @@ img {
 }
 
 .navigationList>li:hover>a {
-    /* font-family: RalewayBold; */
     font-weight: 700;
     border-bottom: 5px solid #000000;
 }
@@ -198,7 +197,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 }
 
 .arrowDown:hover {
@@ -315,11 +313,12 @@ img {
 }
 
 .montains {
-    background-image: url('../img/montains.png');
+    background-image: url('../img/montainsClouds.png');
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom;
-    padding: 26vw 0;
+    padding: 34vw 0;
+    margin-top: -16vw;
 }
 
 .card {
@@ -411,7 +410,7 @@ img {
 }
 
 .serviceContent {
-    background-image: url(../img/personalizado.png);
+    background-image: url(../img/personalizadoSticker.png);
     background-repeat: no-repeat;
     background-size: 39.32vw 37.39vw;
     background-position: right;
@@ -524,6 +523,9 @@ img {
     margin: 1.45vw 0 4.68vw;
     width: 22.29vw;
 }
+.svInfo>img {
+    width: 24.42vw;
+}
 
 .svForm {
     margin: 0 0 0 10.10vw;
@@ -547,6 +549,10 @@ img {
     margin-bottom: 1.56vw;
 }
 
+.footerSocialMedia > .socialMedia > a > img {
+    filter: invert(.7);
+}
+
 .footerInfo>p {
     width: 27.44vw;
     text-align: right;
@@ -555,7 +561,55 @@ img {
 
 
 @media (max-width: 768px) {
-    
+    .fs20 {
+        font-size: 1.04vw;
+    }
+
+    .fs25 {
+        font-size: 1.30vw;
+    }
+
+    .fs40 {
+        font-size: 8vw;
+    }
+
+    .fvBox {
+        flex-direction: column-reverse;
+        margin: 6vw 10vw 0 10vw;
+    }
+
+    .fvInfo {
+        margin: 6vw 0 0 0;
+    }
+
+    .fvInfo>h1 {
+        font-size: 10.64vw;
+        width: 100%;
+    }
+
+    .fvInfo>p {
+        width: 100%;
+        margin: 6.39vw 0;
+    }
+
+    .sixthViewBox {
+        flex-direction: column;
+        margin: 10vw;
+    }
+
+    .svForm>svg {
+        width: 100%;
+    }
+
+    .fvVideo>iframe {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .arrowDown {
+        width: 14.645vw;
+        height: 14.645vw;
+    }
 }
 
 
