@@ -126,7 +126,7 @@ img {
     margin: 0 2.08vw 0 0;
 }
 
-.navigationList>li:nth-child(4) {
+.navigationList>li:nth-child(5) {
     margin: 0;
 }
 
@@ -446,8 +446,6 @@ img {
     width: 13.385vw;
 }
 
-.serviceContent {}
-
 .serviceContentBox {
     padding: 5.67vw 29.78vw 11.7vw 6.82vw;
     display: none;
@@ -608,6 +606,26 @@ img {
 .byeDesktop {
     display: none;
 }
+
+
+/* styles for js, etc */
+
+.disabled {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.activeFlex {
+    display: flex;
+}
+
+.visible {
+    opacity: 1;
+}
+
 
 
 @media (max-width: 768px) {
@@ -779,7 +797,7 @@ img {
         align-items: left;
         justify-content: left;
         margin-top: 0;
-        padding: 9vw 0 49vw;
+        padding: 9vw 0 53vw;
     }
 
     .diagnostico,
@@ -807,6 +825,28 @@ img {
     .card>p {
         width: 72vw;
         margin: 0 0 0 4vw;
+    }
+
+    .glide__arrow {
+        border: none;
+        box-shadow: none;
+        filter: contrast(0);
+    }
+
+    .glide__arrow--left {
+        left: 2vw;
+    }
+
+    .glide__arrow--right {
+        right: 2vw;
+    }
+
+    .glide__bullets {
+        bottom: 0;
+    }
+
+    .glide__bullet {
+        filter: invert(.7);
     }
 
     .fourthVBox {
@@ -980,21 +1020,3 @@ img {
 }
 
 
-
-/* styles for js, etc */
-
-.disabled {
-    display: none;
-}
-
-.active {
-    display: block;
-}
-
-.activeFlex {
-    display: flex;
-}
-
-.visible {
-    opacity: 1;
-}

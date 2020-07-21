@@ -80,3 +80,4 @@ buttomsTeam.forEach((buttomTeam, index) => {
 });
 
 
+new Glide('.glide').mount()
